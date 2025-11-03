@@ -1,3 +1,5 @@
+import prompt from "./prompt";
+
 function iterativeFibonacci(num: number): number | number[] {
   if (num === 0) return 0;
   if (num === 1) return [0, 1];
@@ -21,4 +23,7 @@ function recursiveFibonacci(num: number, arr = [0, 1]): number | number[] {
   return recursiveFibonacci(num, arr);
 }
     
-console.log(recursiveFibonacci(10));
+prompt("Enter a number:\n")
+  .then((value) => console.log(recursiveFibonacci(Number(value))))
+
+

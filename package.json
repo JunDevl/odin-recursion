@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/JunDevl/odin-recursion#readme",
   "dependencies": {
+    "@types/node": "^24.10.0",
     "typescript": "^5.9.3"
   }
 }
