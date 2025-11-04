@@ -8,10 +8,21 @@ function mergeSort(unsorted: number[]): number[] {
 
   const sorted = [] 
 
-  let leftIndex = 0;
-  let rightIndex = leftIndex;
-  for (;leftIndex <= left.length; leftIndex++) {
-    sorted.push(left[i] < right[i])
+  let i = 0;
+  let j = 0;
+
+  while (i <= left.length && j <= right.length && (left[i] !== undefined || right[j] !== undefined)) {
+    if (left[i] <= right[j] || right[j] === undefined) {
+      sorted.push(left[i])
+      i++;
+      continue;
+    }
+
+    if (right[j] <= left[i] || left[i] === undefined) {
+      sorted.push(right[j])
+      j++;
+      continue;
+    }
   }
 
   return sorted;
