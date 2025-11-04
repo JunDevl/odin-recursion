@@ -12,6 +12,7 @@
 		"allowSyntheticDefaultImports": true,
 		"strict": true,
     "outDir": "build",
+		"target": "es6",
 		"lib": ["ES5", "ES6", "DOM", "DOM.Iterable"],
 	},
 }
